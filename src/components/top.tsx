@@ -9,21 +9,40 @@ const top: React.FC = () => {
                 <p className='TitleText'>development_lab</p>
             </div>
             <div className='profile'>
-                <p>-開発者-</p>
+                <p className='profileTitle'>-開発者-</p>
                 <p>Murakami Taichi</p>
             </div>
 
-            <div className='appList title'>
-                <p>-制作履歴-</p>  
+            <div className='appListtitle'>
+                <p>制作履歴</p>  
             </div>
             <div className='contents'>
-                <div className='contentsItem'>
-                    <div>
+                <div className='contentsItems'>
+                    <div className='contentsItem'>
                         <AppContents />
                     </div>
-                    <div>
+                    <div className='contentsItem'>
                         <AppContents />
                     </div>
+                    <div className='contentsItem'>
+                        <AppContents />
+                    </div>
+                    <div className='contentsItem'>
+                        <AppContents />
+                    </div>
+                    <div className='contentsItem'>
+                        <AppContents />
+                    </div>
+                    <div className='contentsItem'>
+                        <AppContents />
+                    </div>
+                    <div className='contentsItem'>
+                        <AppContents />
+                    </div>
+                    <div className='contentsItem'>
+                        <AppContents />
+                    </div>
+                    
                 </div>
             </div>
         </div>

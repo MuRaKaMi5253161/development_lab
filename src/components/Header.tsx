@@ -11,11 +11,11 @@ const Header: React.FC = () => {
         <div className="header">
             <div className="header-menu-line">
                 <span className="icon x">
-                    <a href='https://twitter.com/unko____ta' target="_blank" rel="noopener noreferrer"><TwitterIcon className='Icon Twitter' /></a>
+                    <a href='https://twitter.com/unko____ta' target="_blank" rel="noopener noreferrer" className='xIcon'><TwitterIcon className='Icon Twitter' /></a>
                 </span>
                 
                 <span className="icon github">
-                    <a href='https://github.com/MuRaKaMi5253161' target='_blank' rel='noopener noreferrer'><GitHubIcon className='Icon GitHub' /></a>
+                    <a href='https://github.com/MuRaKaMi5253161' target='_blank' rel='noopener noreferrer' className='githubIcon'><GitHubIcon className='Icon GitHub' /></a>
                 </span>
             </div>
         </div>
