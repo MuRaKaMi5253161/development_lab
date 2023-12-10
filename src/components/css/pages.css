@@ -1,0 +1,45 @@
+body {  
+    background-color: rgb(236, 236, 236);
+    color: rgb(0, 0, 0);
+    margin: 0;
+}
+
+.Looms {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.appProfile {
+    padding-top: 120px;
+    text-align: center;
+}
+
+.appName {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.appskil {
+    padding-top: 30px;
+}
+
+.appImageText {
+    padding-top: 30px;
+}
+
+.skilIcons {
+    width: 60px;
+    height: 60px;
+}
+
+.appImage {
+    padding-top: 20px;
+}
+
+.appImageItems {
+    width: 600px;
+    border-style: none;
+    border-radius: 30px;
+}
