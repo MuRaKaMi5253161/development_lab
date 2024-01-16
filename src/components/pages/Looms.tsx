@@ -20,7 +20,6 @@ import loomsImg3 from '../img/loomsImage3.png';
 const Looms: React.FC = () => {
 
     const location = useLocation();
-
     const appName = location.state.appName;
 
     return(
@@ -41,16 +40,16 @@ const Looms: React.FC = () => {
                     <span><img className='skilIcons' src={muiIcon} alt='skilIcon' /></span>
                 </div> 
 
-                <div>
+                <div className='appImage'>
                     <p className='appImageText'>-Image-</p>
                     <div>
-                        <img className='appImage' src={loomsImg1}  alt="appImage" />
+                        <img className='appImageItems' src={loomsImg1}  alt="appImage" />
                     </div>
                     <div>
-                        <img className='appImage' src={loomsImg2}  alt="appImage" />
+                        <img className='appImageItems' src={loomsImg2}  alt="appImage" />
                     </div>
                     <div>
-                        <img className='appImage' src={loomsImg3}  alt="appImage" />
+                        <img className='appImageItems' src={loomsImg3}  alt="appImage" />
                     </div>
                 </div>    
             </div>

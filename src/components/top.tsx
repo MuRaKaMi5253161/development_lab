@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react'
 import './css/top.css';
 import AppContents from './appContents'
+import db from '../firebase';
+import {DocumentData, collection, getDocs} from 'firebase/firestore';
 
-const top: React.FC = () => {
+const Top: React.FC = () => {
+
+    // documentDataの型指定しておく
+    const [apps, setApps] = useState<DocumentData>([]);
+    
+    const appData = collection(db, "app");
+    getDocs(appData).then((querySnapshots) => {
+        setApps(querySnapshots.docs.map((doc) => doc.data()));
+    });
+
     return (
         <div className='topArea'>
             <div className='Title'>
@@ -19,34 +30,17 @@ const top: React.FC = () => {
             <div className='contents'>
                 <div className='contentsItems'>
                     <div className='contentsItem'>
-                        <AppContents />
+                        {apps.map((app:any) => (
+                            <AppContents
+                                appNameText={app.appName}
+                                appCreateDate={app.appCreateDate}
+                            />
+                        ))}
                     </div>
-                    <div className='contentsItem'>
-                        <AppContents />
-                    </div>
-                    <div className='contentsItem'>
-                        <AppContents />
-                    </div>
-                    <div className='contentsItem'>
-                        <AppContents />
-                    </div>
-                    <div className='contentsItem'>
-                        <AppContents />
-                    </div>
-                    <div className='contentsItem'>
-                        <AppContents />
-                    </div>
-                    <div className='contentsItem'>
-                        <AppContents />
-                    </div>
-                    <div className='contentsItem'>
-                        <AppContents />
-                    </div>
-                    
                 </div>
             </div>
         </div>
     );
 };
 
-export default top;
+export default Top;
