@@ -1,18 +1,22 @@
-import React, { useState } from 'react'
+import React from 'react'
+// import React, { useEffect, useState } from 'react'
 import './css/top.css';
 import AppContents from './appContents'
-import db from '../firebase';
-import {DocumentData, collection, getDocs} from 'firebase/firestore';
+// import db from '../firebase';
+// import {DocumentData, collection, getDocs} from 'firebase/firestore';
 
 const Top: React.FC = () => {
 
     // documentDataの型指定しておく
-    const [apps, setApps] = useState<DocumentData>([]);
+    // const [apps, setApps] = useState<DocumentData>([]);
     
-    const appData = collection(db, "app");
-    getDocs(appData).then((querySnapshots) => {
-        setApps(querySnapshots.docs.map((doc) => doc.data()));
-    });
+    // useEffect(() => {
+    //     const appData = collection(db, "app");
+    //     getDocs(appData).then((querySnapshots) => {
+    //     setApps(querySnapshots.docs.map((doc) => doc.data()));
+    //     });
+    // }, []);
+    
 
     return (
         <div className='topArea'>
@@ -29,13 +33,25 @@ const Top: React.FC = () => {
             </div>
             <div className='contents'>
                 <div className='contentsItems'>
-                    <div className='contentsItem'>
-                        {apps.map((app:any) => (
+                        {/* {apps.map((app:any) => (
+                            <div className='contentsItem'>
                             <AppContents
                                 appNameText={app.appName}
                                 appCreateDate={app.appCreateDate}
                             />
-                        ))}
+                            </div>
+                        ))} */}
+                    <div className='contentsItem'>
+                        <AppContents
+                        appNameText="Looms"
+                        appCreateDate="2022/9"
+                        />
+                    </div>
+                    <div className='contentsItem'>
+                        <AppContents
+                        appNameText="HotelReservation"
+                        appCreateDate="2022/11"
+                        />
                     </div>
                 </div>
             </div>

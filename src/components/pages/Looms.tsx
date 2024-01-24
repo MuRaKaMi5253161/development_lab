@@ -23,12 +23,13 @@ const Looms: React.FC = () => {
     const appName = location.state.appName;
 
     return(
-        <div className='Looms'>
+        <div className='app'>
             <div className='appProfile'>
                 <p className='appName'>{appName}</p>
 
                 <p className='appUrl'>-URL-</p>
-                <a href='https://looms-831f0.web.app' target='_blank' rel='noopener noreferrer' className='applink'>https://looms-831f0.web.app</a>
+                <a href='https://looms-831f0.web.app' target='_blank' rel='noopener noreferrer' className='applink'>application</a><br/>
+                <a href='https://github.com/MuRaKaMi5253161/looms' target='_blank' rel='noopener noreferrer' className='applink'>repository</a>
 
                 <div>
                     <p className='appskil'>-skil-</p>

@@ -2,6 +2,8 @@ import React from "react";
 import { useNavigate } from "react-router-dom"
 import './css/appContents.css'
 import demoImg from '../components/img/demoapp.jpg'
+import HotelReservation from "./img/HotelReservationapp.png";
+import Looms from "./img/Loomsapp.png";
 
 
 const AppContents: React.FC<{ appNameText: any; appCreateDate: any; }> = (props) => {
@@ -12,7 +14,19 @@ const AppContents: React.FC<{ appNameText: any; appCreateDate: any; }> = (props)
     const appNameText = props.appNameText;
     const appCreateDate = props.appCreateDate;
 
-    console.log(appNameText);
+    const getAppIcon = () => {
+        if(appNameText === "HotelReservation") {
+            return HotelReservation;
+        } else if(appNameText === "Looms") {
+            return Looms;
+        } else {
+            return demoImg;
+        }
+    }
+
+    
+    
+
 
     const moveAppPage = () => {
         navigation('/' + appNameText,{ state: { appName: appNameText, date: appCreateDate }});
@@ -22,7 +36,7 @@ const AppContents: React.FC<{ appNameText: any; appCreateDate: any; }> = (props)
        <div className='app' onClick={moveAppPage}>
             <div className='appBox'>
                 <div className='appImg'>
-                    <img src={demoImg}  alt="アイコン" />
+                    <img src={getAppIcon()}  alt="アイコン" />
                 </div>
                 <div className='appName'>
                     <p className='appNameText'>{appNameText}</p>
