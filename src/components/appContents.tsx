@@ -24,10 +24,6 @@ const AppContents: React.FC<{ appNameText: any; appCreateDate: any; }> = (props)
         }
     }
 
-    
-    
-
-
     const moveAppPage = () => {
         navigation('/' + appNameText,{ state: { appName: appNameText, date: appCreateDate }});
     }
@@ -36,7 +32,7 @@ const AppContents: React.FC<{ appNameText: any; appCreateDate: any; }> = (props)
        <div className='app' onClick={moveAppPage}>
             <div className='appBox'>
                 <div className='appImg'>
-                    <img src={getAppIcon()}  alt="アイコン" />
+                    <img src={getAppIcon()} className="Img"  alt="アイコン" />
                 </div>
                 <div className='appName'>
                     <p className='appNameText'>{appNameText}</p>

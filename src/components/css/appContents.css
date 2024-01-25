@@ -3,6 +3,12 @@
     height: 400px;
 }
 
+@media screen and (max-width:480px) {
+    .app {
+        height: 300px;
+    }
+}
+
 .appBox {
     height: 100% !important;
     width: 100% !important;
@@ -12,13 +18,34 @@
     padding-top: 20px;
 }
 
+@media screen and (max-width:480px) {
+    .Img {
+        width: 80%;
+        border-style: solid;
+        border-radius: 5%;
+        border-color: rgb(136, 136, 136);
+    }
+}
+
 .appNameText {
     font-size: 20px;
     font-weight: bold;
 }
 
+@media screen and (max-width:480px) {
+    .appNameText {
+        display: none;
+    }
+}
+
 .appCreateDate {
     padding-bottom: 20px;
+}
+
+@media screen and (max-width:480px) {
+    .appCreateDate {
+        display: none;
+    }
 }
 
 .app :hover {
