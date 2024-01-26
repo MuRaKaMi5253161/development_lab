@@ -15,6 +15,13 @@ body {
     text-align: center;
 }
 
+@media screen and (max-width:480px) {
+    .appProfile {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding-top: 40px;
+    }
+}
+
 .appName {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 25px;
@@ -25,8 +32,20 @@ body {
     padding-top: 30px;
 }
 
+@media screen and (max-width:480px) {
+    .appskil {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+}
+
 .appImageText {
     padding-top: 30px;
+}
+
+@media screen and (max-width:480px) {
+    .appImageText {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 }
 
 .skilIcons {
@@ -34,12 +53,32 @@ body {
     height: 60px;
 }
 
+@media screen and (max-width:480px) {
+    .skilIcons {
+        width: 40px;
+        height: 40px;
+    }
+}
+
 .appImage {
     padding-top: 20px;
+}
+
+@media screen and (max-width:480px) {
+    .appImage {
+        padding-top: 5px;
+    }
 }
 
 .appImageItems {
     width: 600px;
     border-style: none;
-    border-radius: 30px;
+    padding-bottom: 30px;
+}
+
+@media screen and (max-width:480px) {
+    .appImageItems {
+        width: 80%;
+        padding-bottom: 20px;
+    }
 }
