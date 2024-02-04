@@ -6,12 +6,13 @@ import './css/Header.css';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import HomeIcon from '@mui/icons-material/Home';
+import Humberger from './humberger';
 
 const Header: React.FC = () => {
     return (
         <div className="header">
             <div className="header-menu-line">
-            <span className="icon x">
+                <span className="icon x">
                     <a href='/' className='homeIcon'><HomeIcon className='Icon home' /></a>
                 </span>
 
@@ -21,6 +22,9 @@ const Header: React.FC = () => {
                 
                 <span className="icon github">
                     <a href='https://github.com/MuRaKaMi5253161' target='_blank' rel='noopener noreferrer' className='githubIcon'><GitHubIcon className='Icon GitHub' /></a>
+                </span>
+                <span className='humberger'>
+                    <Humberger />
                 </span>
             </div>
         </div>
